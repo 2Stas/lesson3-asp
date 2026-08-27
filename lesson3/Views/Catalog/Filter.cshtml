@@ -1,0 +1,19 @@
+﻿@model List<lesson3.Models.CategoryProduct>
+
+<form method="get" asp-action="Filter" asp-controller="Catalog" style="display:flex; flex-direction: column;">
+	<input type="number" name="minPrice" placeholder="Мінімальна ціна" style="width:200px;" />
+	<input type="number" name="maxPrice" placeholder="Максимальна ціна" style="width:200px;" />
+	<button type="submit" style="width:200px;">Застосувати фільтр</button>
+</form>
+<a href="/catalog">Повернутися до каталогу</a>
+
+<h1>Результати фільтрації</h1>
+
+@foreach (var product in Model)
+{
+    <p>
+        @product.Name 
+        @product.Price грн. 
+        @product.Quantity шт.
+    </p>
+}
