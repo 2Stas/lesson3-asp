@@ -5,6 +5,7 @@ namespace lesson3.Controllers
     [Route("TimeManager")]
     public class TimeManagerController : Controller
     {
+
         [HttpGet("")]
         public IActionResult Index()
         {
@@ -35,7 +36,7 @@ namespace lesson3.Controllers
         {
             return Content("My last name is Doe");
         }
-        [HttpPost("ManageTime?{task}&hours={hours}")]
+        [HttpGet("ManageTime")]
         public IActionResult ManageTime(string task, int hours)
         {
             if(hours <= 0 || task == null || task == "")
