@@ -6,7 +6,7 @@ namespace lesson3.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return Content("Welcome to the Time Manager!");
         }
         public IActionResult Me()
         {
